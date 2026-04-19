@@ -1,24 +1,25 @@
-🛍 Products API — Django REST + Swagger
-📌 Overview
+🛍 Inventory & Order Management API — Django REST + Swagger
 
-The Products API is a RESTful backend service built with Django and Django REST Framework (DRF) for managing product data.
+## 📌 Overview
 
-It provides endpoints to create, retrieve, update, and delete products, along with auto-generated API documentation using Swagger (OpenAPI).
+This project is a RESTful API built with Django and Django REST Framework (DRF) for managing:
 
-This project demonstrates modern backend development practices including:
+- Products
+- Vendors
+- Clients
+- Orders
 
-- RESTful API design
-- Serializer-based data validation
-- Class-based generic views
-- Interactive API documentation
+The system demonstrates relational data modeling and scalable API design, with interactive documentation powered by Swagger (OpenAPI).
 
-🚀 Features
+## 🚀 Features
 
-- 📦 Product CRUD Operations
-- 🔄 RESTful API endpoints
-- 🧪 Built-in API testing via Swagger UI
-- 📄 Auto-generated API documentation (OpenAPI)
-- 🧱 Clean and scalable DRF architecture
+- 📦 Product management (CRUD)
+- 🏢 Vendor management
+- 👥 Client management
+- 🧾 Order management (linked to products, clients, and vendors)
+- 🔄 RESTful API architecture
+- 🧪 Interactive API testing with Swagger
+- 📄 Auto-generated API documentation
 
 🏗 Tech Stack
 Backend: Django 6
@@ -53,18 +54,48 @@ python manage.py migrate
 5️⃣ Start the server
 python manage.py runserver
 
-🌐 API Endpoints
-🔹 Base URL
-http://127.0.0.1:8000/
+## 🌐 API Endpoints
 
-📦 Products
-Method Endpoint Description
-GET /api/v1/products/ List all products
-POST /api/v1/products/ Create a product
-GET /api/v1/products/{id}/ Retrieve product
-PUT /api/v1/products/{id}/ Update product
-PATCH /api/v1/products/{id}/ Partial update
-DELETE /api/v1/products/{id}/ Delete product
+### 📦 Products
+
+- GET `/api/v1/products/`
+- POST `/api/v1/products/`
+- GET `/api/v1/products/{id}/`
+- PUT/PATCH `/api/v1/products/{id}/`
+- DELETE `/api/v1/products/{id}/`
+
+### 🏢 Vendors
+
+- GET `/api/v1/vendors/`
+- POST `/api/v1/vendors/`
+- GET `/api/v1/vendors/{id}/`
+- PUT/PATCH `/api/v1/vendors/{id}/`
+- DELETE `/api/v1/vendors/{id}/`
+
+### 👥 Clients
+
+- GET `/api/v1/clients/`
+- POST `/api/v1/clients/`
+- GET `/api/v1/clients/{id}/`
+- PUT/PATCH `/api/v1/clients/{id}/`
+- DELETE `/api/v1/clients/{id}/`
+
+### 🧾 Orders
+
+- GET `/api/v1/orders/`
+- POST `/api/v1/orders/`
+- GET `/api/v1/orders/{id}/`
+- PUT/PATCH `/api/v1/orders/{id}/`
+- DELETE `/api/v1/orders/{id}/`
+
+## 🔗 Data Relationships
+
+- An **Order** is linked to:
+  - a Product
+  - a Client
+  - a Vendor
+
+This demonstrates relational database design using foreign keys.
 
 🧪 Swagger API Documentation
 Interactive API documentation is available at:
