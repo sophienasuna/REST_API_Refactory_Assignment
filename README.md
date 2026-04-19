@@ -54,6 +54,9 @@ python manage.py migrate
 5️⃣ Start the server
 python manage.py runserver
 
+6️⃣ Run tests
+python manage.py test
+
 ## 🌐 API Endpoints
 
 ### 📦 Products
